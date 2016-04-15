@@ -1,14 +1,19 @@
-var tdPeso = document.getElementById("peso-1").textContent;
-var tdAltura = document.getElementById("altura-1");
-
-console.log(tdPeso)
-
-var paciente = {peso : document.getElementById("peso-1").textContent,altura : document.getElementById("altura-2").textContent};
-
-if(paciente.altura > 0)
+var tabela = document.getElementsByClassName("paciente")
+// for(x = 0; x <= tabela.length - 1; x++)
+var x = 0;
+while ( x <= tabela.length - 1 )
 {
-  console.log( paciente.peso / (paciente.altura * paciente.altura));
-  document.getElementById('imc-1').textContent = ( paciente.peso / (paciente.altura * paciente.altura));
+    var paciente_tabela = tabela[x];
+
+    var paciente = {
+      nome : paciente_tabela.getElementsByClassName("info-nome")[0].textContent,
+      peso : paciente_tabela.getElementsByClassName("info-peso")[0].textContent,
+      altura : paciente_tabela.getElementsByClassName("info-altura")[0].textContent
+    };
+
+    if(paciente.altura > 0)
+      paciente_tabela.getElementsByClassName('info-imc')[0].textContent = ( paciente.peso / (paciente.altura * paciente.altura));
+    else
+      console.log('A altura deve ser maior que 0');
+    x++;
 }
-else
-  console.log('A altura deve ser maior que 0');
