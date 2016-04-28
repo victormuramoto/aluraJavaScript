@@ -1,3 +1,5 @@
 var tabela = document.getElementsByClassName("paciente")
 
-iterate(tabela,montaPaciente)
+iterate(tabela,function(pacienteTr) {
+  montaPaciente(pacienteTr).pegaImc()
+})

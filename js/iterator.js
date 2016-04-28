@@ -1,7 +1,6 @@
-function iterate(tabela,behavior) {
+function iterate(array,behavior) {
 
-  for(x = 0; x <= tabela.length - 1; x++){
-    var paciente = behavior(tabela[x])
-    console.log(paciente.pegaImc());
+  for(x = 0; x <= array.length - 1; x++){
+    behavior(array[x])
   }
 }
