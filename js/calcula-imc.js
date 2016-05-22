@@ -1,5 +1,9 @@
-var tabela = document.getElementsByClassName("paciente")
+var botao = document.getElementById("calcula-imcs")
 
-iterate(tabela,function(pacienteTr) {
-  montaPaciente(pacienteTr).pegaImc()
+botao.addEventListener("click", function() {
+  var tabela = document.getElementsByClassName("paciente")
+
+    iterate(tabela,function(pacienteTr) {
+      montaPaciente(pacienteTr).pegaImc()
+    })
 })
