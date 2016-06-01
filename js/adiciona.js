@@ -16,7 +16,9 @@ botao.addEventListener("click",function(event){
   document.querySelector("#campo-nome").value = "";
   document.querySelector("#campo-peso").value = "";
   document.querySelector("#campo-altura").value = "";
+})
 
-  montaPaciente(newPatient).pegaImc();
-
-});
+botao.addEventListener("click",function(){
+  pacientes = document.querySelectorAll(".paciente")
+  montaPaciente(pacientes[pacientes.length - 1]).pegaImc();
+})
